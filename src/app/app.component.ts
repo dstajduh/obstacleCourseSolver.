@@ -303,8 +303,10 @@ export class AppComponent implements OnInit {
             }
           });
           // spajanje ulaza i izlaza iz crvotocine u jedan path
-          if (wormholeEntranceBestPath && wormholeExitBestPath) {
+          if (wormholeEntranceBestPath.length > 0 && wormholeExitBestPath.length > 0) {
             this.bestPathWormhole = wormholeEntranceBestPath.concat(wormholeExitBestPath);
+          } else {
+            this.bestPathWormhole = [];
           }
         }
       }
